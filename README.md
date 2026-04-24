@@ -2,8 +2,7 @@
 
 **Replication package for Davidsson (2026)**
 
-This repository contains the complete code, data construction pipeline,
-and writeup for ECON 622. The paper extends Hennessy and
+The paper extends Hennessy and
 Whited (2007) with a text-informed bond pricing channel and documents
 that FinBERT-based 10-K sentiment predicts corporate default while
 dictionary-based (Loughran-McDonald) measures do not.
