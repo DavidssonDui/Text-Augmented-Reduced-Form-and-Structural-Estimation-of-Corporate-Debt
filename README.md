@@ -3,7 +3,7 @@
 **Replication package for Davidsson (2026)**
 
 This repository contains the complete code, data construction pipeline,
-and writeup for the master's thesis. The paper extends Hennessy and
+and writeup for ECON 622. The paper extends Hennessy and
 Whited (2007) with a text-informed bond pricing channel and documents
 that FinBERT-based 10-K sentiment predicts corporate default while
 dictionary-based (Loughran-McDonald) measures do not.
@@ -12,42 +12,42 @@ dictionary-based (Loughran-McDonald) measures do not.
 
 ```
 replication_package/
-├── README.md                  ← you are here
-├── REPRODUCING.md             ← step-by-step reproduction recipe
+├── README.md ← you are here
+├── REPRODUCING.md ← step-by-step reproduction recipe
 │
-├── paper/                     ← the paper itself
-│   ├── paper.tex              ← single-file LaTeX source
-│   ├── paper.pdf              ← compiled paper (24 pages)
-│   ├── table[1-9]_*.tex       ← 9 result tables (booktabs)
-│   ├── figure[1-2]_*.pdf      ← 2 figures (quintile chart, sample over time)
-│   └── line_search_comparison.pdf  ← SMM identification diagnostic figure
+├── paper/ ← the paper itself
+│ ├── paper.tex ← single-file LaTeX source
+│ ├── paper.pdf ← compiled paper (24 pages)
+│ ├── table[1-9]_*.tex ← 9 result tables (booktabs)
+│ ├── figure[1-2]_*.pdf ← 2 figures (quintile chart, sample over time)
+│ └── line_search_comparison.pdf ← SMM identification diagnostic figure
 │
-├── reduced_form/              ← reduced-form regression analysis
-│   ├── src/                   ← regression utils, signal construction, LaTeX formatter
-│   ├── scripts/               ← 9 table scripts + 2 figure scripts + run_all.py
-│   ├── tests/                 ← 70 unit tests
-│   ├── output/tables/         ← .tex (paper-ready) + .txt (console-readable)
-│   ├── output/figures/        ← .pdf + .png
-│   ├── pytest.ini
-│   └── requirements.txt
+├── reduced_form/ ← reduced-form regression analysis
+│ ├── src/ ← regression utils, signal construction, LaTeX formatter
+│ ├── scripts/ ← 9 table scripts + 2 figure scripts + run_all.py
+│ ├── tests/ ← 70 unit tests
+│ ├── output/tables/ ← .tex (paper-ready) + .txt (console-readable)
+│ ├── output/figures/ ← .pdf + .png
+│ ├── pytest.ini
+│ └── requirements.txt
 │
-├── deqn_solver/               ← DEQN solver + SMM infrastructure
-│   ├── src/
-│   │   ├── config.py          ← model, network, training configs
-│   │   ├── primitives_smooth.py ← profit, taxes, equity cost (Option 1)
-│   │   ├── networks.py        ← MLP, ValueNet, PolicyNet, DefaultNet
-│   │   ├── solver_v6b.py      ← DEQN solver
-│   │   ├── sim_moments.py     ← 22-moment computation
-│   │   ├── run_smm.py         ← Nelder-Mead SMM optimizer
-│   │   └── sampling_stub.py   ← stub for sampling (real version not in package)
-│   ├── tests/                 ← 148 unit tests
-│   └── pytest.ini
+├── deqn_solver/ ← DEQN solver + SMM infrastructure
+│ ├── src/
+│ │ ├── config.py ← model, network, training configs
+│ │ ├── primitives_smooth.py ← profit, taxes, equity cost (Option 1)
+│ │ ├── networks.py ← MLP, ValueNet, PolicyNet, DefaultNet
+│ │ ├── solver_v6b.py ← DEQN solver
+│ │ ├── sim_moments.py ← 22-moment computation
+│ │ ├── run_smm.py ← Nelder-Mead SMM optimizer
+│ │ └── sampling_stub.py ← stub for sampling (real version not in package)
+│ ├── tests/ ← 148 unit tests
+│ └── pytest.ini
 │
-├── nlp_pipeline/              ← 10-K text processing
-│   ├── 01_get_filing_urls.py  ← EDGAR query
-│   ├── 02_extract_text.py     ← Item 1A and Item 7 extraction
-│   ├── 03_lm_scores.py        ← Loughran-McDonald dictionary scoring
-│   ├── 04_finbert_scores.py   ← FinBERT [CLS] embedding extraction
+├── nlp_pipeline/ ← 10-K text processing
+│ ├── 01_get_filing_urls.py ← EDGAR query
+│ ├── 02_extract_text.py ← Item 1A and Item 7 extraction
+│ ├── 03_lm_scores.py ← Loughran-McDonald dictionary scoring
+│ ├── 04_finbert_scores.py ← FinBERT [CLS] embedding extraction
 │   ├── 05_build_text_signal.py ← LM (PCA) and FinBERT (supervised) signals
 │   └── lm_dictionary.py       ← LM word lists
 │
