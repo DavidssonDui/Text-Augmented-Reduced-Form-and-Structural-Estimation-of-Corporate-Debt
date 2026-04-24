@@ -1,0 +1,25 @@
+\begin{table}[htbp]
+\centering
+\caption{Out-of-sample prediction performance.}
+\label{tab:t8_oos}
+\small
+\begin{tabular}{lcccc}
+\toprule
+ & Controls & $+ s^{\mathrm{LM}}$ & $+ s^{\mathrm{FB}}$ & $+$ both \\
+ & (1) & (2) & (3) & (4) \\
+\midrule
+Test-set AUC & 0.7984 & 0.8476 & 0.9166 & 0.9174 \\
+Test-set avg. precision & 0.0279 & 0.0705 & 0.0360 & 0.0354 \\
+In-sample AUC (train) & 0.8668 & 0.9025 & 0.9386 & 0.9385 \\
+\midrule
+N (train) & 30,056 & 23,023 & 23,023 & 23,023 \\
+N (test) & 22,610 & 17,692 & 17,692 & 17,692 \\
+Defaults (test) & 61 & 54 & 54 & 54 \\
+\bottomrule
+\end{tabular}
+\\[-2ex]
+\begin{flushleft}
+\footnotesize
+\textit{Notes}: Logistic regression models fit on firm-years with $\text{fyear} \le 2014$ and evaluated on firm-years with $\text{fyear} \ge 2015$. Controls are log assets, book leverage, Tobin's Q, profitability, and cash/assets. The text signals $s^{\mathrm{LM}}$ and $s^{\mathrm{FB}}$ are standardized within year. The dependent variable is default within two years. AUC $=$ area under the ROC curve; AP $=$ average precision (area under precision-recall curve).
+\end{flushleft}
+\end{table}

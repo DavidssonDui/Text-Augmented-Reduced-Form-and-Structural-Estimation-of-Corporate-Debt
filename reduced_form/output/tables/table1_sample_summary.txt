@@ -1,0 +1,17 @@
+TABLE 1: Sample summary statistics
+======================================================================
+
+Panel A: Sample composition
+  Period: 2006-2022, Firms: 8,590, Obs: 63,449
+  Defaults: 125 broad, 90/150/200 within 1/2/3 years
+  Coverage: FinBERT 47,051 (74.2%), LM 47,051 (74.2%)
+
+Panel B: Variable distributions
+Variable                        N       Mean         SD        P25        P50        P75
+Total assets (\$M)         63,449      6,354     27,909        119        555      2,609
+Book leverage              63,449     0.2341     0.2365     0.0176     0.1847     0.3661
+Tobin's Q                  60,926     1.7878     1.7499     0.7792     1.2145     2.0897
+Profitability              63,245    -0.0095     0.3149    -0.0304     0.0865     0.1456
+Cash/assets                63,448          0          0          0          0          0
+FinBERT signal             47,051    -0.0390     0.9799    -0.6511    -0.0589     0.5632
+LM signal (PC1)            47,051    -0.0025     0.9906    -0.6126    -0.0246     0.5831

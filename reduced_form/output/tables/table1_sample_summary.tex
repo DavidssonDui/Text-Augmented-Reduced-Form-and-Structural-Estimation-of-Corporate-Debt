@@ -1,0 +1,42 @@
+\begin{table}[htbp]
+\centering
+\caption{Sample summary statistics.}
+\label{tab:t1_sample_summary}
+\small
+\begin{tabular}{lr}
+\multicolumn{2}{l}{\textit{Panel A: Sample composition}} \\
+\toprule
+Sample period & 2006--2022 \\
+Unique firms & 8,590 \\
+Firm-year observations & 63,449 \\
+\midrule
+Default events (broad sample) & 125 \\
+\quad Defaults within 1 year & 90 \\
+\quad Defaults within 2 years & 150 \\
+\quad Defaults within 3 years & 200 \\
+\midrule
+FinBERT signal coverage & 47,051 (74.2\%) \\
+LM signal coverage & 47,051 (74.2\%) \\
+\bottomrule
+\end{tabular}
+\vspace{1em}
+\begin{tabular}{lrrrrrr}
+\multicolumn{7}{l}{\textit{Panel B: Variable distributions}} \\
+\toprule
+Variable & N & Mean & SD & P25 & Median & P75 \\
+\midrule
+Total assets (\$M) & 63,449 & 6,354 & 27,909 & 119 & 555 & 2,609 \\
+Book leverage & 63,449 & 0.234 & 0.236 & 0.018 & 0.185 & 0.366 \\
+Tobin's Q & 60,926 & 1.788 & 1.750 & 0.779 & 1.214 & 2.090 \\
+Profitability & 63,245 & -0.010 & 0.315 & -0.030 & 0.086 & 0.146 \\
+Cash/assets & 63,448 & 0 & 0 & 0 & 0 & 0 \\
+FinBERT signal & 47,051 & -0.039 & 0.980 & -0.651 & -0.059 & 0.563 \\
+LM signal (PC1) & 47,051 & -0.003 & 0.991 & -0.613 & -0.025 & 0.583 \\
+\bottomrule
+\end{tabular}
+\\[-1ex]
+\begin{flushleft}
+\footnotesize
+\textit{Notes}: Sample of US public firms (excluding financials and utilities) covering fiscal years 2006--2022. Default events combine LoPucki Bankruptcy Research Database filings (Chapter 7 and Chapter 11) with CRSP delisting codes 400--499 (liquidations) and 552 (insufficient capital). Defaults within $h$ years are forward-looking from the observation date. Both text signals (FinBERT and LM) are standardized to mean zero and unit variance within each fiscal year. Financial variables are winsorized at the 1st and 99th percentiles within year.
+\end{flushleft}
+\end{table}

@@ -1,0 +1,31 @@
+\begin{table}[htbp]
+\centering
+\caption{Baseline LM regressions. The dependent variable is default within two years (binary). The LM signal $s^{\mathrm{LM}}$ is the first principal component of the standardized fractions of negative, uncertainty, and weak-modal Loughran-McDonald (2011) categories in the combined Item 1A (Risk Factors) and Item 7 (MD\&A) sections of the 10-K. Both signals and PC weights are computed within year. Coefficients give the marginal effect on the probability of default within two years per standard deviation increase in $s^{\mathrm{LM}}$. Industry FE use 1-digit SIC.}
+\label{tab:t3_baseline_lm}
+\small
+\begin{tabular}{lccccc}
+\toprule
+ & (1) & (2) & (3) & (4) & (5) \\
+\midrule
+$s^{\mathrm{LM}}$ & $-0.0001^{}$ & $+0.0001^{}$ & $+0.0003^{}$ & $+0.0004^{}$ & $+0.0004^{}$ \\
+ & (0.0003) & (0.0003) & (0.0004) & (0.0004) & (0.0004) \\
+\midrule
+Log assets &  & $+0.0004^{***}$ & $+0.0001^{}$ & $-0.0002^{}$ & $-0.0002^{}$ \\
+Book leverage &  &  & $+0.0123^{***}$ & $+0.0122^{***}$ & $+0.0122^{***}$ \\
+Tobin's Q &  &  & $-0.0009^{***}$ & $-0.0008^{***}$ & $-0.0008^{***}$ \\
+Profitability &  &  & $-0.0027^{*}$ & $-0.0007^{}$ & $-0.0005^{}$ \\
+Cash/assets &  &  & $+0.0005^{}$ & $+0.0016^{}$ & $+0.0019^{}$ \\
+\midrule
+Industry FE & No & No & No & Yes & Yes \\
+Year FE & No & No & No & No & Yes \\
+\midrule
+Observations & 41,154 & 41,154 & 40,715 & 40,715 & 40,715 \\
+R-squared & 0.0000 & 0.0003 & 0.0042 & 0.0141 & 0.0150 \\
+\bottomrule
+\end{tabular}
+\\[-2ex]
+\begin{flushleft}
+\footnotesize
+\textit{Notes}: Cluster-robust standard errors in parentheses, clustered by firm (gvkey). Stars indicate statistical significance: $^{*}p<0.1$, $^{**}p<0.05$, $^{***}p<0.01$.
+\end{flushleft}
+\end{table}

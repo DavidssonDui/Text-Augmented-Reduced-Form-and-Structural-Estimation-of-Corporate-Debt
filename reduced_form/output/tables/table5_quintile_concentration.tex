@@ -1,0 +1,25 @@
+\begin{table}[htbp]
+\centering
+\caption{Default concentration by FinBERT quintile.}
+\label{tab:t5_quintile}
+\small
+\begin{tabular}{lrrrrr}
+\toprule
+FinBERT & Mean & & Defaults within & Default & Share of \\
+quintile & signal & N firm-years & 2 years & rate (\%) & defaults (\%) \\
+\midrule
+1 (lowest) & -1.392 & 8,238 & 2 & 0.024 & 1.9 \\
+2 & -0.533 & 8,226 & 3 & 0.036 & 2.8 \\
+3 & -0.062 & 8,229 & 5 & 0.061 & 4.7 \\
+4 & +0.422 & 8,226 & 5 & 0.061 & 4.7 \\
+5 (highest) & +1.314 & 8,235 & 92 & 1.117 & 86.0 \\
+\midrule
+Total & -0.050 & 41,154 & 107 & 0.260 & 100.0 \\
+\bottomrule
+\end{tabular}
+\\[-1ex]
+\begin{flushleft}
+\footnotesize
+\textit{Notes}: Sample restricted to firm-years with both FinBERT signal and observable forward default. Quintiles are assigned within each fiscal year so that sample composition does not drive the result. The top quintile (5) captures the firm-years with the most negative-toned 10-K text. The default rate within two years rises monotonically across quintiles, with the top quintile concentrating a disproportionate share of subsequent default events.
+\end{flushleft}
+\end{table}

@@ -1,0 +1,35 @@
+\begin{table}[htbp]
+\centering
+\caption{Fair comparison of LM dictionary and FinBERT signals. The supervised LM signal ($s^{\mathrm{LM,sup}}$) is constructed by projecting the three LM category fractions (negative, uncertainty, weak modal) onto the default direction identified by logistic regression on firms in the first half of the sample ($\text{fyear} \le \text{median}$), using the same procedure as $s^{\mathrm{FB}}$. The unsupervised variant $s^{\mathrm{LM,unsup}}$ is the first principal component of the same three categories, standardized within year. All signals are standardized to mean zero and unit variance within each year. The dependent variable is default within two years (binary). Industry FE use 1-digit SIC.}
+\label{tab:t9_supervised_lm}
+\small
+\begin{tabular}{lcccc}
+\toprule
+ & (1) & (2) & (3) & (4) \\
+\midrule
+$s^{\mathrm{LM,unsup}}$ (PCA) & $-0.0001^{}$ &  &  &  \\
+ & (0.0003) &  &  &  \\
+$s^{\mathrm{LM,sup}}$ &  & $-0.0001^{}$ &  & $-0.0003^{}$ \\
+ &  & (0.0003) &  & (0.0004) \\
+$s^{\mathrm{FB}}$ &  &  & $+0.0048^{***}$ & $+0.0037^{***}$ \\
+ &  &  & (0.0007) & (0.0007) \\
+\midrule
+Log assets &  &  &  & $-0.0002^{}$ \\
+Book leverage &  &  &  & $+0.0089^{***}$ \\
+Tobin's Q &  &  &  & $-0.0005^{***}$ \\
+Profitability &  &  &  & $+0.0008^{}$ \\
+Cash/assets &  &  &  & $+0.0036^{**}$ \\
+\midrule
+Industry FE & No & No & No & Yes \\
+Year FE & No & No & No & Yes \\
+\midrule
+Observations & 41,154 & 41,154 & 41,154 & 40,715 \\
+R-squared & 0.0000 & 0.0000 & 0.0085 & 0.0188 \\
+\bottomrule
+\end{tabular}
+\\[-2ex]
+\begin{flushleft}
+\footnotesize
+\textit{Notes}: Cluster-robust standard errors in parentheses, clustered by firm (gvkey). Stars indicate statistical significance: $^{*}p<0.1$, $^{**}p<0.05$, $^{***}p<0.01$.
+\end{flushleft}
+\end{table}

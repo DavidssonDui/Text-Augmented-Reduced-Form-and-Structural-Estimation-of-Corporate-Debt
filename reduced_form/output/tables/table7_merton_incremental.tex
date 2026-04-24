@@ -1,0 +1,33 @@
+\begin{table}[htbp]
+\centering
+\caption{Incremental predictive power of FinBERT over Merton-naive distance-to-default (Bharath and Shumway, 2008). The dependent variable is default within two years (binary). Merton distress is defined as $-DD$, where $DD = [\ln(V/F) + (r-0.5\sigma_V^2)T]/(\sigma_V \sqrt{T})$ with $V$ equity plus book debt, $F$ default point $=dlc + 0.5 \cdot dltt$, $T=1$ year, $r$ the 1-year Treasury yield, and $\sigma_V$ the Bharath-Shumway naive approximation. Both Merton distress and $s^{\mathrm{FB}}$ are standardized to mean zero and unit variance within each year. Coefficients are marginal effects on default probability per standard deviation increase. Industry FE use 1-digit SIC.}
+\label{tab:t7_merton}
+\small
+\begin{tabular}{lccccc}
+\toprule
+ & (1) & (2) & (3) & (4) & (5) \\
+\midrule
+Merton distress ($-DD$) & $+0.0018^{***}$ &  & $+0.0010^{**}$ & $-0.0005^{}$ & $-0.0006^{}$ \\
+ & (0.0004) &  & (0.0005) & (0.0006) & (0.0006) \\
+$s^{\mathrm{FB}}$ &  & $+0.0048^{***}$ & $+0.0045^{***}$ & $+0.0042^{***}$ & $+0.0035^{***}$ \\
+ &  & (0.0007) & (0.0008) & (0.0007) & (0.0007) \\
+\midrule
+Log assets &  &  &  & $+0.0002^{}$ & $+0.0000^{}$ \\
+Book leverage &  &  &  & $+0.0120^{***}$ & $+0.0118^{***}$ \\
+Tobin's Q &  &  &  & $-0.0006^{***}$ & $-0.0006^{***}$ \\
+Profitability &  &  &  & $-0.0036^{*}$ & $-0.0025^{}$ \\
+Cash/assets &  &  &  & $-0.0012^{}$ & $+0.0000^{}$ \\
+\midrule
+Industry FE & No & No & No & No & Yes \\
+Year FE & No & No & No & No & Yes \\
+\midrule
+Observations & 43,689 & 41,154 & 34,018 & 33,996 & 33,996 \\
+R-squared & 0.0014 & 0.0085 & 0.0087 & 0.0112 & 0.0153 \\
+\bottomrule
+\end{tabular}
+\\[-2ex]
+\begin{flushleft}
+\footnotesize
+\textit{Notes}: Cluster-robust standard errors in parentheses, clustered by firm (gvkey). Stars indicate statistical significance: $^{*}p<0.1$, $^{**}p<0.05$, $^{***}p<0.01$.
+\end{flushleft}
+\end{table}

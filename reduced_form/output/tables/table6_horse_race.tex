@@ -1,0 +1,33 @@
+\begin{table}[htbp]
+\centering
+\caption{Horse race between FinBERT and LM text signals. The dependent variable is default within two years (binary). Both signals are standardized to mean zero and unit variance within each year; coefficients are thus per-standard-deviation marginal effects on default probability. Industry FE use 1-digit SIC.}
+\label{tab:t6_horse_race}
+\small
+\begin{tabular}{lccccc}
+\toprule
+ & (1) & (2) & (3) & (4) & (5) \\
+\midrule
+$s^{\mathrm{LM}}$ & $-0.0001^{}$ &  & $-0.0006^{*}$ & $-0.0004^{}$ & $-0.0002^{}$ \\
+ & (0.0003) &  & (0.0004) & (0.0004) & (0.0004) \\
+$s^{\mathrm{FB}}$ &  & $+0.0048^{***}$ & $+0.0049^{***}$ & $+0.0043^{***}$ & $+0.0037^{***}$ \\
+ &  & (0.0007) & (0.0007) & (0.0007) & (0.0007) \\
+\midrule
+Log assets &  &  &  & $+0.0000^{}$ & $-0.0002^{}$ \\
+Book leverage &  &  &  & $+0.0086^{***}$ & $+0.0089^{***}$ \\
+Tobin's Q &  &  &  & $-0.0005^{***}$ & $-0.0005^{***}$ \\
+Profitability &  &  &  & $-0.0004^{}$ & $+0.0008^{}$ \\
+Cash/assets &  &  &  & $+0.0026^{}$ & $+0.0035^{**}$ \\
+\midrule
+Industry FE & No & No & No & No & Yes \\
+Year FE & No & No & No & No & Yes \\
+\midrule
+Observations & 41,154 & 41,154 & 41,154 & 40,715 & 40,715 \\
+R-squared & 0.0000 & 0.0085 & 0.0086 & 0.0100 & 0.0187 \\
+\bottomrule
+\end{tabular}
+\\[-2ex]
+\begin{flushleft}
+\footnotesize
+\textit{Notes}: Cluster-robust standard errors in parentheses, clustered by firm (gvkey). Stars indicate statistical significance: $^{*}p<0.1$, $^{**}p<0.05$, $^{***}p<0.01$.
+\end{flushleft}
+\end{table}

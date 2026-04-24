@@ -1,0 +1,33 @@
+\begin{table}[htbp]
+\centering
+\caption{FinBERT predictive power across forecast horizons. The dependent variable is default within $h$ years where $h \in \{1, 2, 3\}$ across columns. All specifications include both $s^{\mathrm{FB}}$ and $s^{\mathrm{LM}}$, financial controls, industry FE (1-digit SIC), and year FE. Coefficients give the marginal effect on default probability per standard deviation increase in the signal. Cluster-robust standard errors by firm.}
+\label{tab:t4_horizons}
+\small
+\begin{tabular}{lccc}
+\toprule
+ & 1-year & 2-year & 3-year \\
+\midrule
+$s^{\mathrm{FB}}$ & $+0.0023^{***}$ & $+0.0037^{***}$ & $+0.0048^{***}$ \\
+ & (0.0004) & (0.0007) & (0.0009) \\
+$s^{\mathrm{LM}}$ & $-0.0001^{}$ & $-0.0002^{}$ & $-0.0003^{}$ \\
+ & (0.0002) & (0.0004) & (0.0005) \\
+\midrule
+Log assets & $-0.0002^{}$ & $-0.0002^{}$ & $-0.0000^{}$ \\
+Book leverage & $+0.0053^{***}$ & $+0.0089^{***}$ & $+0.0115^{***}$ \\
+Tobin's Q & $-0.0002^{***}$ & $-0.0005^{***}$ & $-0.0006^{***}$ \\
+Profitability & $+0.0004^{}$ & $+0.0008^{}$ & $+0.0009^{}$ \\
+Cash/assets & $+0.0024^{*}$ & $+0.0035^{**}$ & $+0.0043^{**}$ \\
+\midrule
+Industry FE & Yes & Yes & Yes \\
+Year FE & Yes & Yes & Yes \\
+\midrule
+Observations & 40,715 & 40,715 & 40,715 \\
+R-squared & 0.0161 & 0.0187 & 0.0214 \\
+\bottomrule
+\end{tabular}
+\\[-2ex]
+\begin{flushleft}
+\footnotesize
+\textit{Notes}: Cluster-robust standard errors in parentheses, clustered by firm (gvkey). Stars indicate statistical significance: $^{*}p<0.1$, $^{**}p<0.05$, $^{***}p<0.01$.
+\end{flushleft}
+\end{table}
